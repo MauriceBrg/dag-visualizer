@@ -3,6 +3,12 @@ on:
     branches:
     - main
     - release/*
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   test:
@@ -24,10 +30,10 @@ jobs:
     - name: npm install, build and test
       run: |
         npm install
-        npm run build --if-present
         npm test
     
   build_and_deploy:
+    needs: test
     name: Build and Deploy to Github Pages
     runs-on: ubuntu-latest
     
@@ -40,7 +46,7 @@ jobs:
 
     - name: npm build
       run: |
-        npm install
+        npm install --production
         npm run build --if-present
     
     - name: Upload Artifacts
