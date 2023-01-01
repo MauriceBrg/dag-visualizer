@@ -1,7 +1,10 @@
 # Demo-App to visualize Directed Acyclic Graphs
 
 This project is a demo that I built to learn/experiment with a few technologies.
-It uses
+
+[Check it out](https://mauricebrg.github.io/dag-visualizer/)
+
+It uses:
 
 - [Create React App](https://github.com/facebook/create-react-app) to bootstrap a react app
 - [React JS](https://reactjs.org/) as the Frontend Framework
