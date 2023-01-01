@@ -9,8 +9,9 @@ It uses
 - [Jest](https://jestjs.io/) for some unit tests
 - [Cytoscape.JS](https://js.cytoscape.org/) to visualize the DAG
 - [Bootstrap](https://getbootstrap.com/) for the little bit of styling there is
+- Github Actions to provide CI/CD for this repository
 
-If you find parts of it useful, that's great! The code is release under the Unlicense which means you can take whatever you want from it without giving credit etc.
+If you find parts of it useful, that's great! The code is release under the [Unlicense](LICENSE) which means you can take whatever you want from it without giving credit etc.
 
 ## Caveats
 
