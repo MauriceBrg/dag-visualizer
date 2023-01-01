@@ -1,3 +1,4 @@
+name: Test-Build-Deploy
 on:
   push:
     branches:
@@ -50,9 +51,9 @@ jobs:
         npm run build --if-present
     
     - name: Upload Artifacts
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-pages-artifact@v1.0.7
       with:
-        name: github-pages
+        # Path of the directory containing the static assets.
         path: build
           
     - name: Deploy GitHub Pages site
