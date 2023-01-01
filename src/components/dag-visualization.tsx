@@ -40,7 +40,7 @@ export function DagVisualizationComponent(props: { dagElements: DagElement[], cy
     const setCytoscape = useCallback(
         (ref: cytoscape.Core) => {
             cy.current = ref;
-            cy.current.on("click", "node", (event) => {
+            cy.current.on("select", "node", (event) => {
                 const target: Collection[] = event.target
                 addHighlightToNodeAndConnections(target[0])
             })
