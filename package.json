@@ -1,5 +1,6 @@
 {
   "name": "dag-visualizer",
+  "homepage": "https://mauricebrg.github.io/dag-visualizer/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
