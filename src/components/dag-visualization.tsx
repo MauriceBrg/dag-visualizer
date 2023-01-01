@@ -33,7 +33,7 @@ export function highlightCollection(collection: Collection | CollectionReturnVal
     collection.addClass(HIGHLIGHT_CLASS_NAME)
 }
 
-export const DagVisualizationComponent = (props: { dagElements: DagElement[], cyRef(cy: cytoscape.Core): void }) => {
+export function DagVisualizationComponent(props: { dagElements: DagElement[], cyRef(cy: cytoscape.Core): void }) {
     cytoscape.use(dagre)
 
     const cy = useRef<cytoscape.Core | null>(null);
