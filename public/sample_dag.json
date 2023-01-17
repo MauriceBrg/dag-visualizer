@@ -1,0 +1,49 @@
+[
+    {
+        "id": "someNode",
+        "type": "node",
+        "colorKey": "type-a"
+    },
+    {
+        "id": "anotherNode",
+        "type": "node"
+    },
+    {
+        "id": "thirdNode",
+        "type": "node",
+        "colorKey": "type-b"
+    },
+    {
+        "id": "fourthNode",
+        "type": "node",
+        "colorKey": "type-a"
+    },
+    {
+        "id": "fifthNode",
+        "type": "node"
+    },
+    {
+        "id": "fromNodeToAnotherNode",
+        "type": "edge",
+        "source": "someNode",
+        "target": "anotherNode"
+    },
+    {
+        "id": "fromAnotherNodeToThirdNode",
+        "type": "edge",
+        "source": "anotherNode",
+        "target": "thirdNode"
+    },
+    {
+        "id": "fromFourthNodeToAnotherNode",
+        "type": "edge",
+        "source": "fourthNode",
+        "target": "anotherNode"
+    },
+    {
+        "id": "fromfifthNodeToThirdNode",
+        "type": "edge",
+        "source": "fifthNode",
+        "target": "thirdNode"
+    }
+]
