@@ -64,6 +64,8 @@ export function DagVisualizationComponent(props: { dagElements: DagElement[], cy
     const layout = {
         name: 'dagre',
         nodeDimensionsIncludeLabels: true,
+        animate: true,
+        rankDir: 'LR'
         // grid: true,
         // directed: true,
     }
@@ -72,7 +74,7 @@ export function DagVisualizationComponent(props: { dagElements: DagElement[], cy
         {
             selector: 'node',
             style: {
-                // 'background-color': 'data(color)',
+                'background-color': 'data(backgroundColor)',
                 'label': 'data(id)',
             }
         },
@@ -91,15 +93,22 @@ export function DagVisualizationComponent(props: { dagElements: DagElement[], cy
             selector: `node.${HIGHLIGHT_CLASS_NAME}`,
             style: {
                 // 'color': 'red',
-                'background-color': 'yellow',
+                'border-color': 'black',
+                'border-width': '2',
+                'transition-property': 'border-color border-width',
+                'transition-duration': 2,
+                'transition-timing-function': 'ease-in'
             }
         },
         {
             selector: `edge.${HIGHLIGHT_CLASS_NAME}`,
             style: {
                 // 'label': 'data(id)',
-                'line-color': 'green',
-                'target-arrow-color': 'green',
+                'line-color': 'black',
+                'target-arrow-color': 'black',
+                'transition-property': 'line-color target-arrow-color',
+                'transition-duration': 2,
+                'transition-timing-function': 'ease-in'
             }
         }
     ]

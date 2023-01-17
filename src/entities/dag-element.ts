@@ -28,4 +28,9 @@ export interface DagElement {
      * A short description < 255 chars that describes the node or edge, may be used on mouseover actions.   
      */
     shortDescription?: string
+
+    /**
+     * A value that will be used to automatically map to a color for the node/edge
+     */
+    colorKey?: string
 }

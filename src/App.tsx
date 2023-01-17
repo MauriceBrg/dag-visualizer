@@ -1,14 +1,16 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import { DagVisualizationComponent, highlightCollection, removeAllHighlights } from './components/dag-visualization';
 import { Stack } from 'react-bootstrap';
 import { ControlBar } from './components/dag-controls';
 import { DagElement, DagElementTypes } from './entities/dag-element';
 import cytoscape from 'cytoscape';
+import { getDag } from './services/dag';
+
 
 function App() {
 
-  const dag: DagElement[] = [
+  const defaultDag: DagElement[] = [
     {
       id: "someNode",
       type: DagElementTypes.Node,
@@ -54,6 +56,17 @@ function App() {
       target: "thirdNode",
     },
   ]
+
+  const [dag, setDag] = useState<DagElement[]>([])
+
+  useEffect(
+    () => {
+      getDag().then(
+        (value) => {
+          setDag(value)
+        }
+      )
+    }, [])
 
   const [cy, setCy] = useState<cytoscape.Core | null>(null)
 
