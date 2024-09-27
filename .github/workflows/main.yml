@@ -17,7 +17,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        node_version: ['14', '16']
+        node_version: ['16', '20']
         os: [ubuntu-latest]
 
     
@@ -40,10 +40,10 @@ jobs:
     
     steps:
     - uses: actions/checkout@v1
-    - name: Use Node.js 16
+    - name: Use Node.js 20
       uses: actions/setup-node@v3.5.1
       with:
-        node-version: 16
+        node-version: 20
 
     - name: npm build
       run: |
